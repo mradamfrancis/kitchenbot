@@ -30,7 +30,7 @@ I will respond to the following messages:
 //*********************************************
 
 // response to the user typing "help"
-slapp.message(/^(kitchen|kitchenbot)/i, ['mention', 'direct_message'], (msg) => {
+slapp.message(/^(kitchen|kitchenbot|yo)/i, ['mention', 'direct_message'], (msg) => {
   msg.say('@adam')
 })
 
