@@ -30,12 +30,17 @@ I will respond to the following messages:
 //*********************************************
 
 // response to the user typing "help"
-slapp.message(/^(kitchen|kitchenbot|yo)/i, ['mention', 'direct_message'], (msg) => {
-  msg.say('@adam')
+slapp.message(/^(go)/i, ['mention', 'direct_message'], (msg) => {
+  msg.say('Good morning :) This week, @Adam & @Haroun are in charge of the kithen')
 })
 
-slapp.message(/^(adam|af)/i, ['mention', 'direct_message'], (msg) => {
-  msg.say('<!adam>')
+
+slapp.message(/^(go)/i, ['mention', 'direct_message'], (msg) => {
+  msg.say('Good morning :) This week, @Adam & @Haroun are in charge of the kithen')
+})
+
+slapp.message(/^(help|HELP)/i, ['mention', 'direct_message'], (msg) => {
+  msg.say('Please unload dishwasher every morning\nPlease put the dishwasher one before you leave\nPlease ensure kitchen surfaces are wiped down and tidy')
 })
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
